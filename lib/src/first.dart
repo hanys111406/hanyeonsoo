@@ -25,8 +25,7 @@ class first extends StatelessWidget {
                 RaisedButton(
                   child: Text('Go to First page'),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MyApp()));
+                    Navigator.pop(context);
                   },
               ),
             ],
