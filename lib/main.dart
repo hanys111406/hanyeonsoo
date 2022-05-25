@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:untitled/src/first.dart';
 
 
-void main(){
-  runApp(const MaterialApp(home: MyApp(),));
-}
+
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -19,10 +18,9 @@ class _MyAppState extends State<MyApp>{
   get mainAxisAlignment => null;
   @override
   Widget build(BuildContext context) {
-    var semibold;
     return Scaffold(
       body: Center(
-        child: Column(
+        child: Column (
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Hello,World!', style: TextStyle(fontSize: 30),),
@@ -83,9 +81,9 @@ class _MyAppState extends State<MyApp>{
               child: Column(
                 children: [
                   RaisedButton(
-                    child: Text('Go to main page'),
+                    child: Text('Touch me!'),
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>first()));
+                      Get.toNamed('/first');
                     },
                   ),
                 ],
